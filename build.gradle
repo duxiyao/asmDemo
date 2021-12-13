@@ -2,8 +2,10 @@
 buildscript {
     
     repositories {
-        google()
-        jcenter()
+        google { url 'https://maven.aliyun.com/repository/google' }
+        jcenter { url 'https://maven.aliyun.com/repository/jcenter' }
+        mavenCentral { url 'https://maven.aliyun.com/repository/central' }
+
         maven {
             url uri('./lifecycle-plugin/my-plugin')
         }
@@ -19,8 +21,11 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+        maven { url 'https://jitpack.io' }
+        google { url 'https://maven.aliyun.com/repository/google' }
+        jcenter { url 'https://maven.aliyun.com/repository/jcenter' }
+        mavenCentral { url 'https://maven.aliyun.com/repository/central' }
+
     }
 }
 
